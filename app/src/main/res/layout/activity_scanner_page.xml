@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvCubiculo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cubículo (Cubículo seleccionado)"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:padding="16dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tvDescripcionObjeto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etCodigoDelObjeto"
+        android:layout_marginTop="8dp"
+        android:text="Descripcion del Objeto:" />
+
+    <EditText
+        android:id="@+id/etCodigoDelObjeto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCubiculo"
+        android:layout_toStartOf="@id/ivBarcodeScanner"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="18dp"
+        android:background="@android:drawable/edit_text"
+        android:inputType="text" />
+
+    <ImageView
+        android:id="@+id/ivBarcodeScanner"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignTop="@id/etCodigoDelObjeto"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_barcode1" />
+
+    <EditText
+        android:id="@+id/etDescripcionDelObjeto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDescripcionObjeto"
+
+        android:background="@android:drawable/edit_text"
+        android:hint="Descripcion..."
+        android:inputType="text" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvListaObjetos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_below="@id/etDescripcionDelObjeto"
+        android:layout_above="@+id/bottomSpace"/>
+
+    <Space
+        android:id="@+id/bottomSpace"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
